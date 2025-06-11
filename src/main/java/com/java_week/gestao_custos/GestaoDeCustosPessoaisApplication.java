@@ -8,6 +8,7 @@ public class GestaoDeCustosPessoaisApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GestaoDeCustosPessoaisApplication.class, args);
+
 	}
 
 }
