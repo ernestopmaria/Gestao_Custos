@@ -1,0 +1,3 @@
+2025-06-11 22:13:12.321911-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DESPESA" not found (this database is empty); SQL statement:
+insert into despesa (categoria,data,data_criacao,descricao,email,valor,id) values (?,?,?,?,?,?,?) [42104-232]
