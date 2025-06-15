@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,6 +32,7 @@ public class DespesaController {
     ListarDespesasUseCase listarDespesasUseCase;
 
     @PostMapping
+    @CacheEvict(value = "despesas", allEntries = true) // Evita cache para o método de criação
     public ResponseEntity<?> create(@Valid @RequestBody DespesaDTO despesa) {
         Despesa despesaEntity = new Despesa(
                 despesa.getDescricao(),
